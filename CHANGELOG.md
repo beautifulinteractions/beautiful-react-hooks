@@ -731,3 +731,9 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Change
 
 - Complete typescript rewrite
+
+## [1.0.1] - 2021-08-27
+
+### Fixed
+
+- Changing to the handler function do not cause the handler setter refs to update

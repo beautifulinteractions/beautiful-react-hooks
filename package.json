@@ -1,14 +1,15 @@
 {
   "name": "beautiful-react-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of beautiful (and hopefully useful) React hooks to speed-up your components and hooks development",
   "main": "index.js",
   "module": "esm/index.js",
   "scripts": {
     "lint": "eslint src/ --ext .ts",
+    "build-types": "tsc --project ./tsconfig.types.json",
     "build-cjs": "tsc --project ./tsconfig.cjs.json",
     "build-esm": "tsc --project ./tsconfig.esm.json",
-    "build": "npx del-cli dist && npm run build-cjs && npm run build-esm && echo '\nSuccessfully built'",
+    "build": "npx del-cli dist && npm run build-cjs && npm run build-esm && npm run build-types && echo 'Successfully built'",
     "build-doc": "npx del-cli dist-ghpages && npx styleguidist build",
     "test": "nyc mocha --recursive --exit \"./test/**/*.spec.+(js|jsx)\"",
     "test:watch": "npm run test -- --watch",

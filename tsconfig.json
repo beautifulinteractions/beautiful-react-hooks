@@ -6,7 +6,6 @@
     "target": "es5",
     "jsx": "react",
     "allowJs": false,
-    "declaration": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "rootDir": "./src",

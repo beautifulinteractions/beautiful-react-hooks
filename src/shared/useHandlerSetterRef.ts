@@ -25,7 +25,7 @@ const useHandlerSetterRef = <T extends (...args: any[]) => any>(handler?: T): Ha
     }
 
     handlerRef.current = nextCallback
-  }, [handlerRef])
+  }, [handlerRef.current])
 
   return [handlerRef, setHandler]
 }
